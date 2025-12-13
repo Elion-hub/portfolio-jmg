@@ -1,53 +1,45 @@
 ---
-
-const currentYear = new Date().getFullYear();
-const GITHUB_URL = "https://github.com/Elion-hub";
-const LINKEDIN_URL = "https://www.linkedin.com/in/josem-garcia-";
-const EMAIL_URL = "mailto:a6.josemare@gmail.com"; 
-const TEXT_COLOR = "text-zinc-500";
+import { Github, Linkedin, Mail } from 'lucide-react';
 ---
 
-<footer class="bg-[#0a0a0a] py-10 px-4">
-    
-    <div class="max-w-7xl mx-auto border-t border-zinc-800 mb-6"></div> 
-    
-    <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-end text-sm">
+<footer class="bg-[#0a0a0a] border-t border-white/10 py-12 relative z-10">
+    {/* flex-col = Pone los elementos uno debajo de otro (Móvil)
+       items-center = Centra todo horizontalmente (Móvil)
+       md:flex-row = Pone los elementos en fila (Escritorio)
+       md:justify-between = Los separa a los extremos (Escritorio)
+    */}
+    <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-6">
         
-        
-        <div class="flex flex-col mb-4 md:mb-0 space-y-1">
-            <p class={TEXT_COLOR}>&copy; {currentYear} Jose María García.</p>
-        
+        {/* Texto Copyright */}
+        {/* text-center = Texto centrado (Móvil) | md:text-left = Texto a la izquierda (Escritorio) */}
+        <div class="text-gray-500 text-sm text-center md:text-left">
+            © {new Date().getFullYear()} Jose María García. <br class="block md:hidden"/>
         </div>
 
-        
-        <div class="flex gap-4 md:gap-6">
-            
-           
+        {/* Redes Sociales y Correo */}
+        <div class="flex items-center gap-6">
             <a 
-                href={GITHUB_URL} 
+                href="https://github.com/Elion-hub" 
                 target="_blank" 
-                rel="noopener noreferrer" 
-                class={`${TEXT_COLOR} hover:text-white transition-colors`}
+                aria-label="GitHub"
+                class="text-gray-400 hover:text-white transition-colors hover:scale-110 transform duration-200"
             >
-                GitHub
+                <Github size={20} />
             </a>
-
-            
             <a 
-                href={LINKEDIN_URL} 
+                href="https://www.linkedin.com/in/josem-garcia-" 
                 target="_blank" 
-                rel="noopener noreferrer" 
-                class={`${TEXT_COLOR} hover:text-white transition-colors`}
+                aria-label="LinkedIn"
+                class="text-gray-400 hover:text-white transition-colors hover:scale-110 transform duration-200"
             >
-                LinkedIn
+                <Linkedin size={20} />
             </a>
-
-            
             <a 
-                href={EMAIL_URL} 
-                class={`${TEXT_COLOR} hover:text-white transition-colors`}
+                href="mailto:josemgarcia.contacto@gmail.com" 
+                aria-label="Email"
+                class="text-gray-400 hover:text-white transition-colors hover:scale-110 transform duration-200"
             >
-                Email
+                <Mail size={20} />
             </a>
         </div>
     </div>
