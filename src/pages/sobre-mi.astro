@@ -1,0 +1,176 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Sobre mí - Jose Maria Garcia">
+    <main>
+        <div class="container">
+            <a href="/" class="back-link">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+                Volver al inicio
+            </a>
+
+            <header>
+                <h1>Más allá del <span class="text-gradient">Código</span></h1>
+                <p>Desarrollador Full Stack en formación constante.</p>
+            </header>
+
+            <div class="about-grid">
+                
+                <article class="glass-card story">
+                    <h2>👋 Hola, soy Jose María</h2>
+                    <p>
+                        Soy un desarrollador apasionado por la <strong>arquitectura de software</strong> y el código limpio. 
+                        Actualmente estoy finalizando mis estudios como <strong>Técnico Superior en DAW</strong>, pero mi curiosidad va mucho más allá del aula.
+                    </p>
+                    <p>
+                        Me especializo en el ecosistema <strong>Java (Spring Boot)</strong> para construir backends robustos, aunque disfruto creando experiencias visuales fluidas con <strong>React y Astro</strong>.
+                    </p>
+                    <p>
+                        Mi filosofía es simple: no se trata solo de que funcione, se trata de que sea <strong>escalable, mantenible y eficiente</strong>. Me encanta enfrentarme a problemas complejos y descomponerlos en soluciones modulares (como habrás visto en mis proyectos).
+                    </p>
+                </article>
+
+                <aside class="glass-card stats">
+                    <h3>Datos Rápidos</h3>
+                    
+                    <ul class="stat-list">
+                        <li>
+                            <span class="icon">📍</span>
+                            <div>
+                                <strong>Ubicación</strong>
+                                <span class="detail">España</span>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="icon">🎓</span>
+                            <div>
+                                <strong>Estudios</strong>
+                                <span class="detail">DAW (En curso)</span>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="icon">💡</span>
+                            <div>
+                                <strong>Enfoque</strong>
+                                <span class="detail">Backend & Arquitectura</span>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <div class="soft-skills">
+                        <h3>Soft Skills</h3>
+                        <div class="tags">
+                            <span>Resolución de Problemas</span>
+                            <span>Trabajo en Equipo</span>
+                            <span>Autodidacta</span>
+                            <span>Comunicación</span>
+                        </div>
+                    </div>
+                </aside>
+
+            </div>
+        </div>
+    </main>
+</Layout>
+
+<style>
+    main {
+        width: 100%;
+        margin-top: 2rem;
+        margin-bottom: 4rem;
+    }
+
+    .container {
+        width: 100%;
+        max-width: 900px; 
+        margin: 0 auto;
+    }
+
+    
+    .back-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        color: #a1a1aa;
+        text-decoration: none;
+        font-size: 0.9rem;
+        margin-bottom: 2rem;
+        transition: color 0.2s;
+    }
+    .back-link:hover { color: white; }
+
+    
+    header { margin-bottom: 3rem; }
+    h1 { font-size: 3rem; font-weight: 800; line-height: 1.1; margin: 0 0 0.5rem 0; }
+    header p { color: #a1a1aa; font-size: 1.2rem; }
+
+    .text-gradient {
+        background: linear-gradient(to right, #2997ff, #93c5fd);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    
+    .about-grid {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 2rem;
+    }
+
+    
+    .glass-card {
+        background: var(--glass-bg);
+        backdrop-filter: blur(20px);
+        border: 1px solid var(--glass-border);
+        border-radius: 24px;
+        padding: 2rem;
+        color: #e5e5e5;
+    }
+
+    
+    .story h2 { margin-top: 0; color: white; font-size: 1.5rem; margin-bottom: 1.5rem;}
+    .story p { line-height: 1.8; margin-bottom: 1.5rem; color: #d4d4d8; }
+    .story strong { color: white; font-weight: 600; }
+
+    
+    .stats h3 { margin-top: 0; font-size: 1.1rem; color: white; margin-bottom: 1.5rem; border-bottom: 1px solid var(--glass-border); padding-bottom: 0.5rem; }
+    
+    .stat-list {
+        list-style: none;
+        padding: 0;
+        margin: 0 0 2rem 0;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .stat-list li {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+    }
+
+    .icon { font-size: 1.5rem; background: rgba(255,255,255,0.05); padding: 8px; border-radius: 12px; }
+    
+    .stat-list div { display: flex; flex-direction: column; }
+    .stat-list strong { font-size: 0.9rem; color: #a1a1aa; }
+    .stat-list .detail { font-size: 1rem; color: white; font-weight: 600; }
+
+    .tags { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+    .tags span {
+        background: rgba(41, 151, 255, 0.1);
+        color: #2997ff;
+        font-size: 0.8rem;
+        padding: 4px 10px;
+        border-radius: 100px;
+        border: 1px solid rgba(41, 151, 255, 0.2);
+    }
+
+    
+    @media (max-width: 768px) {
+        .about-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>

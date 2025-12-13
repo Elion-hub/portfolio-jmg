@@ -1,0 +1,54 @@
+---
+
+const currentYear = new Date().getFullYear();
+const GITHUB_URL = "https://github.com/Elion-hub";
+const LINKEDIN_URL = "https://www.linkedin.com/in/josem-garcia-";
+const EMAIL_URL = "mailto:a6.josemare@gmail.com"; 
+const TEXT_COLOR = "text-zinc-500";
+---
+
+<footer class="bg-[#0a0a0a] py-10 px-4">
+    
+    <div class="max-w-7xl mx-auto border-t border-zinc-800 mb-6"></div> 
+    
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-end text-sm">
+        
+        
+        <div class="flex flex-col mb-4 md:mb-0 space-y-1">
+            <p class={TEXT_COLOR}>&copy; {currentYear} Jose María García.</p>
+        
+        </div>
+
+        
+        <div class="flex gap-4 md:gap-6">
+            
+           
+            <a 
+                href={GITHUB_URL} 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                class={`${TEXT_COLOR} hover:text-white transition-colors`}
+            >
+                GitHub
+            </a>
+
+            
+            <a 
+                href={LINKEDIN_URL} 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                class={`${TEXT_COLOR} hover:text-white transition-colors`}
+            >
+                LinkedIn
+            </a>
+
+            
+            <a 
+                href={EMAIL_URL} 
+                class={`${TEXT_COLOR} hover:text-white transition-colors`}
+            >
+                Email
+            </a>
+        </div>
+    </div>
+</footer>
